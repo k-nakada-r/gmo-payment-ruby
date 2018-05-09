@@ -170,6 +170,16 @@ module GMO
         post_request name, options
       end
 
+      ## 3.1.1. 口座登録依頼インターフェース
+      # 口座登録に必要な事項を送信し、以降の口座確認に必要なトランザクション ID を受け取る
+      # /payment/BankAccountEntry.idPass
+      def bank_account_entry(options = {})
+        name = "BankAccountEntry.idPass"
+        required = [:member_id, :create_member, :ret_url, :bank_code, :consumer_device]
+        assert_required_options(required, options)
+        post_request name, options
+      end
+
       private
 
         def api_call(name, args = {}, verb = "post", options = {})
