@@ -12,13 +12,30 @@ module GMO
       apple_pay: 'APay'
     }.freeze
 
-    INPUT_PARAMS = {
-      :access_id             => "AccessID",
-      :access_pass           => "AccessPass",
+    REMITTANCE_INPUT_PARAMS = {
       :account_name          => "Account_Name",
       :account_number        => "Account_Number",
       :account_number_jp     => "Account_Number_Jpbank",
       :account_type          => "Account_Type",
+      :bank_code             => "Bank_Code",
+      :bank_id               => "Bank_ID",
+      :branch_code           => "Branch_Code",
+      :branch_code_jp        => "Branch_Code_Jpbank",
+      :deposit_id            => "Deposit_ID",
+      :deposit_account_name  => "Mail_Deposit_Account_Name",
+      :deposit_email         => "Mail_Address",
+      :deposit_shop_email    => "Shop_Mail_Address",
+      :free                  => "Free",
+    }.freeze
+
+    INPUT_PARAMS = {
+      :access_id             => "AccessID",
+      :access_pass           => "AccessPass",
+      :account_name          => "AccountName",
+      :account_name_kanji    => "AccountNameKanji",
+      :account_number        => "AccountNumber",
+      :account_number_jp     => "Account_Number_Jpbank",
+      :account_type          => "AccountType",
       :address_1             => "Address1",
       :address_2             => "Address2",
       :address_3             => "Address3",
@@ -26,9 +43,9 @@ module GMO
       :address_5             => "Address5",
       :address_6             => "Address6",
       :amount                => "Amount",
-      :bank_code             => "Bank_Code",
+      :bank_code             => "BankCode",
       :bank_id               => "Bank_ID",
-      :branch_code           => "Branch_Code",
+      :branch_code           => "BranchCode",
       :branch_code_jp        => "Branch_Code_Jpbank",
       :cancel_amount         => "CancelAmount",
       :cancel_tax            => "CancelTax",
@@ -42,6 +59,7 @@ module GMO
       :client_field_flg      => "ClientFieldFlag",
       :commodity             => "Commodity",
       :confirm_base_date     => "ConfirmBaseDate",
+      :consumer_device       => "ConsumerDevice",
       :continuance_month     => "ContinuanceMonth",
       :convenience           => "Convenience",
       :create_member         => "CreateMember",

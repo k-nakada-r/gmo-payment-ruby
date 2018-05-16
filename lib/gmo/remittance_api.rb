@@ -325,6 +325,10 @@ module GMO
           end
         end
 
+        def associate_options_to_gmo_params(options)
+          Hash[options.map { |k, v| [GMO::Const::REMITTANCE_INPUT_PARAMS[k], v] }]
+        end
+
     end
 
   end

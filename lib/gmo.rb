@@ -74,7 +74,7 @@ module GMO
         end
 
         def associate_options_to_gmo_params(options)
-          Hash[options.map { |k, v| [GMO::Const::INPUT_PARAMS[k], v] }]
+          raise "Called abstract method: associate_options_to_gmo_params"
         end
 
         def api_call(*args)
